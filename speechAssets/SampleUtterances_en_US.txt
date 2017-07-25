@@ -2,3 +2,15 @@ GetNewFactIntent a fact
 GetNewFactIntent tell me a fact
 GetNewFactIntent give me a fact
 GetNewFactIntent give me something
+GetNewFactIntent tell me a fact about AI
+GetNewFactIntent give me a face about AI
+GetNewFactIntent tell me something about AI
+GetNewFactIntent tell me something about artificial intelligence
+GetNewFactIntent give me a random fact
+GetNewFactIntent tell me a random fact
+GetNewFactIntent give me a fact of the day
+GetNewFactIntent tell me a fact of the day
+GetNewFactIntent tell me some information about AI
+GetNewFactIntent tell me someting interesting about AI
+GetNewFactIntent give me someting interesting
+GetNewFactIntent tell me someting interesting
