@@ -24,7 +24,7 @@ var languageStrings = {
             "SKILL_NAME": "My History Facts",  // OPTIONAL change this to a more descriptive name
             "GET_FACT_MESSAGE": GET_FACT_MSG_EN,
             "HELP_MESSAGE": "You can say tell me a fact, or, you can say exit... What can I help you with?",
-            "HELP_REPROMPT": "What can I help you with?",
+            "HELP_REPROMPT": "Keep asking if you want to hear more",
             "STOP_MESSAGE": "Goodbye!"
         }
     }
@@ -80,11 +80,10 @@ var handlers = {
         
         // Iterate through the list and try to find the fact has FACT_YEAR
         var year = this.event.request.intent.slots.FACT_YEAR.value;
-        factArr.forEach((fact) => {
-            if (fact.indexOf(year) > -1) {
-                randomFact = fact;
-            }
-        });
+        var matchedFact = factArr.filter((fact) => fact.indexOf(year) > -1);
+        if (matchedFact) {
+            randomFact = randomPhrase(matchedFact);            
+        }
 
         var speechOutput = randomPhrase(this.t("GET_FACT_MESSAGE")) + randomFact;
         this.emit(':askWithCard', speechOutput, this.t('HELP_REPROMPT'), this.t('SKILL_NAME'), randomFact);
