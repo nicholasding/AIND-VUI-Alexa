@@ -70,7 +70,20 @@ var handlers = {
         this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomFact)
     },
     'GetNewYearFactIntent': function () {
-        //TODO your code here
+        // Get all the facts and randomly pick one
+        var factArr = this.t('FACTS');
+        var randomFact = randomPhrase(factArr);
+        
+        // Iterate through the list and try to find the fact has FACT_YEAR
+        var year = this.event.request.intent.slots.FACT_YEAR.value;
+        factArr.forEach((fact) => {
+            if (fact.indexOf(year) > -1) {
+                randomFact = fact;
+            }
+        });
+
+        var speechOutput = this.t("GET_FACT_MESSAGE") + randomFact;
+        this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact);
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");

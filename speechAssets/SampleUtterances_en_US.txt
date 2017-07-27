@@ -14,3 +14,19 @@ GetNewFactIntent tell me some information about AI
 GetNewFactIntent tell me someting interesting about AI
 GetNewFactIntent give me someting interesting
 GetNewFactIntent tell me someting interesting
+GetNewYearFactIntent a fact in {FACT_YEAR}
+GetNewYearFactIntent tell me a fact in {FACT_YEAR}
+GetNewYearFactIntent give a fact in {FACT_YEAR}
+GetNewYearFactIntent tell me something happened in {FACT_YEAR}
+GetNewYearFactIntent tell me something will happen in {FACT_YEAR}
+GetNewYearFactIntent tell me a random fact in {FACT_YEAR}
+GetNewYearFactIntent give me a random fact in {FACT_YEAR}
+GetNewYearFactIntent I'd like to know a random fact in {FACT_YEAR}
+GetNewYearFactIntent I'd like to know an interesting fact in {FACT_YEAR}
+GetNewYearFactIntent tell me a fact about AI in {FACT_YEAR}
+GetNewYearFactIntent give me a fact about AI in {FACT_YEAR}
+GetNewYearFactIntent tell me something interesting in {FACT_YEAR}
+GetNewYearFactIntent tell me an interesting fact in {FACT_YEAR}
+GetNewYearFactIntent tell me a random fact for year {FACT_YEAR}
+GetNewYearFactIntent give me a random fact for year {FACT_YEAR}
+GetNewYearFactIntent just tell me something in year {FACT_YEAR}
