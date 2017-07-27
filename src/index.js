@@ -24,7 +24,7 @@ var languageStrings = {
             "SKILL_NAME": "My History Facts",  // OPTIONAL change this to a more descriptive name
             "GET_FACT_MESSAGE": GET_FACT_MSG_EN,
             "HELP_MESSAGE": "You can say tell me a fact, or, you can say exit... What can I help you with?",
-            "HELP_REPROMPT": "Keep asking if you want to hear more",
+            "HELP_REPROMPT": "You can ask for another fact by saying give me a fact",
             "STOP_MESSAGE": "Goodbye!"
         }
     }
