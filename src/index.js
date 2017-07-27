@@ -1,6 +1,6 @@
 'use strict';
 var Alexa = require('alexa-sdk');
-var APP_ID = undefined;  // can be replaced with your app ID if publishing
+var APP_ID = 'amzn1.ask.skill.c4ebc6e0-7d97-40a7-baa9-396aeb237402';  // can be replaced with your app ID if publishing
 var facts = require('./facts');
 var GET_FACT_MSG_EN = [
     "Here's your fact: ",
@@ -71,7 +71,7 @@ var handlers = {
 
         // Create speech output
         var speechOutput = randomPhrase(this.t("GET_FACT_MESSAGE")) + randomFact;
-        this.emit(':askWithCard', speechOutput, this.t("SKILL_NAME"), randomFact, 'Anything else');
+        this.emit(':askWithCard', speechOutput, this.t('HELP_REPROMPT'), this.t("SKILL_NAME"), randomFact);
     },
     'GetNewYearFactIntent': function () {
         // Get all the facts and randomly pick one
@@ -86,8 +86,8 @@ var handlers = {
             }
         });
 
-        var speechOutput = this.t("GET_FACT_MESSAGE") + randomFact;
-        this.emit(':askWithCard', speechOutput, this.t('SKILL_NAME'), randomFact, 'Anything else');
+        var speechOutput = randomPhrase(this.t("GET_FACT_MESSAGE")) + randomFact;
+        this.emit(':askWithCard', speechOutput, this.t('HELP_REPROMPT'), this.t('SKILL_NAME'), randomFact);
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");
